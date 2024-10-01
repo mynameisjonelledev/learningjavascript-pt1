@@ -1,0 +1,131 @@
+body {
+  background-color: beige;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+body, div, a, button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.l4-container {
+  background-color: pink;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.l4-main-container {
+  align-items: center;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+.l4b-main {
+  margin-top: 10px;
+}
+
+.l4e-add {
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+.l4e-buy {
+  background-color: orange;
+  border: 1px solid black;
+}
+
+.l4e-buy:hover , .l4e-add:hover {
+  cursor: pointer;
+}
+
+.l4i-main {
+  margin-top: 30px;
+  border: 2px solid pink;
+  width: 200px;
+  padding: 10px;
+}
+
+.l4i-add , .l4i-buy {
+  margin-top: 10px;
+}
+
+.l4i-add:hover , .l4i-buy:hover {
+  cursor: pointer;
+}
+
+.l4i-add:active , .l4i-buy:active {
+  opacity: 0.5;
+}
+
+.l4i-add {
+  background-color: yellow;
+}
+
+.l4i-buy {
+  background-color: orange;
+}
+
+.nav-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 50px;
+}
+
+.nav-caption {
+  text-align: center;
+  font-size: large;
+}
+
+#options, #home {
+  background-color: black;
+  color: white;
+  font-size: medium;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 10px;
+}
+
+.nav-home-btn {
+  width: 200px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.nav-home-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+
+.head-container {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+nav button {
+  background-color: black;
+  color: white;
+  font-size: medium;
+}
+
+nav button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.l4e-add, .l4e-buy , .l4i-add, .l4i-buy {
+  color: black;
+}

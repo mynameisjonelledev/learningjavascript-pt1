@@ -1,0 +1,97 @@
+body {
+    background-color: beige;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+body, div, a, button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.front-img {
+    width: 500px;
+    margin-bottom: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    
+}
+
+.front-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    margin: 5%;
+}
+
+.front-img-title {
+    width: 500px;
+    text-align: center;
+}
+
+.head-container {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.nav-main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 50px;
+}
+
+.nav-caption {
+    text-align: center;
+    font-size: large;
+}
+
+#options, #home {
+    background-color: black;
+    color: white;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+.nav-home-btn {
+    width: 200px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.nav-home-btn:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.front-btn {
+    margin: 10px;
+}
+
+nav button {
+    background-color: black;
+    color: white;
+    font-size: medium;
+}
+
+nav button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
