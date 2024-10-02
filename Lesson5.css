@@ -1,0 +1,73 @@
+body {
+  background-color: #cdb4db;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.head-container {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #bde0fe;
+}
+
+/* this is for navigation */
+.navigation-link {
+  background-color: #003049;
+  padding: 5px;
+  margin: 2px;
+}
+
+.navigation-link:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.navigation-main-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* navigation css ends here */
+
+.l5-answers {
+ display: flex;
+ flex-direction: column;
+ margin-top: 50px;
+ border: 2px solid #003049;
+ padding: 10px;
+
+ justify-content: center;
+}
+
+.l5-space {
+   height: 50px;
+}
+
+.l5-explanation {
+  margin-top: 10px;
+  color: #003049;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 700px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.footer-credits {
+  background-color: #003049;
+  color: white;
+  text-align: center;
+  margin-top: 25%;
+  padding: 20px;
+}

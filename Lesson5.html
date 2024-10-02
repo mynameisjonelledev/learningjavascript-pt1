@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Variables</title>
+
+<link rel="stylesheet" href="/Lesson5.css">
+<script src="Lesson5.js"></script>
+
+<link rel="icon" type="x-icon/images" href="https://cdn.icon-icons.com/icons2/881/PNG/512/Pineapple_icon-icons.com_68707.png">
+</head>
+<body>
+
+ <div class="head-container">Lesson 5 : Variables</div>
+ 
+
+  <nav class="navigation-main-con">
+    <button class="navigation-link"><a href="/index.html">Home</a></button>
+    <button class="navigation-link"><a href="/Lesson4.html">Lesson 4</a></button>
+    <button class="navigation-link"><a href="/Lesson5.html">Lesson 5</a></button>
+    <button class="navigation-link"><a href="#">Lesson 6</a></button>
+    <button class="navigation-link"><a href="#">Lesson 7</a></button>
+    <button class="navigation-link"><a href="#">Lesson 8</a></button>
+    <button class="navigation-link"><a href="#">Lesson 9</a></button>
+    <button class="navigation-link"><a href="#">Lesson 10</a></button>
+    <button class="navigation-link"><a href="#">Lesson 11</a></button>
+    <button class="navigation-link"><a href="#">Lesson 12</a></button>
+  </nav>
+
+  <section>
+    <div class="l5-answers">
+      <div>const name = 'Snacky';</div>
+      <div>console.log(`My name is ${name}`)</div>
+      <div class="l5-space"></div>
+      <div>const cost = 5 + 2 * 3 + 9;</div>
+      <div>console.log(`Cost of food: $${cost}`);</div>
+      <div></div>
+    </div>
+
+    <div class="l5-explanation"> // This is my answers to the exercises and you can see it on the .js part of this webpage
+    </div>
+  </section>
+
+
+  <h3>Cart Quantity</h3>
+  <button onclick="console.log(`Cart quantity: ${cartQuantity} `);">Show Quantity</button>
+
+  <button onclick="
+  cartQuantity = cartQuantity + 1;
+  console.log(`Successfully added 1 item.\nCart quantity : ${cartQuantity}`);
+  ">Add to Cart</button>
+
+  <button onclick="cartQuantity = cartQuantity + 2;
+  console.log(`Successfully added 2 items.\nCart quantity : ${cartQuantity}`)">
+    +2
+  </button>
+
+  <button onclick="cartQuantity = cartQuantity + 3;
+  console.log(`Successfully added 3 items.\nCart quantity : ${cartQuantity}`);">
+    +3
+  </button>
+
+  <button onclick="cartQuantity +=4;
+  console.log(`Successfully added 4 items.\nCart quantity : ${cartQuantity}`);">
+    +4
+  </button>
+
+  <button onclick="cartQuantity +=5;
+  console.log(`Successfully added 2 items.\nCart quantity: ${cartQuantity}`);">
+    +5
+  </button>
+
+  <button onclick="cartQuantity -=2;
+  console.log(`Successfully removed 2 items from cart.\nCart quantity: ${cartQuantity}`);">
+    -2
+  </button>
+
+  <button onclick="cartQuantity -=3;
+  console.log(`Successfully removed 3 items from cart.\nCart quantity: ${cartQuantity}`);">
+    -3
+  </button>
+
+  <button onclick="cartQuantity = 0;
+  console.log(`Cart has been reset\nCart quantity : ${cartQuantity}`)">
+    Reset Cart
+  </button>
+
+  <button onclick="cartQuantity -=1;
+  console.log(`Successfully removed one item from cart.\nCart quantity: ${cartQuantity}`);">
+    Remove from cart
+  </button>
+
+
+</body>
+</html>
