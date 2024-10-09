@@ -1,0 +1,260 @@
+.navigation-link {
+  background-color: #003049;
+  padding: 5px;
+  margin: 2px;
+}
+
+.navigation-link:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.navigation-main-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+body {
+  background-color: #bde0fe;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+  
+}
+
+.head-container {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #bde0fe;
+}
+
+.opening-con {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.img-img {
+  width: 300px;
+}
+
+.img-details {
+  width: 500px;
+  font-size: medium;
+  text-align: center;
+}
+
+.opening-hr-con {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #003049;
+  width: 2000px;
+
+  
+}
+
+.rock-paper-title {
+  font-size: 25px;
+}
+
+.rock-paper-btn {
+  margin-top: 10px;
+}
+
+.rock-paper-link {
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: underline;
+  color: black;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.rock-paper-main-con {
+  margin-top: 50px;
+}
+
+
+.l6-questions {
+  margin-top: 20px;
+  width: 500px;
+  border-radius: 15px;
+}
+
+.l6-answers {
+  height: 255px;
+  border-radius: 15px;
+}
+
+.l6-answers-6f {
+  width: 400px;
+}
+
+.lesson6-main-con {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-flip-game-con {
+  margin-top: 50px;
+  border: #003049 2px solid;
+  padding: 10px;
+}
+
+.coin-title {
+  font-size: 30px;
+}
+
+.coin-btn-con {
+  margin-top: 20px;
+}
+
+/* BTN Copied from cssbuttons.app */
+.bn30 {
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+  padding: 0.7em 2em;
+  border-radius: 65px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: white;
+}
+
+.bn30 .text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+}
+
+.bn30:after {
+  content: "";
+  border-radius: 18px;
+  position: absolute;
+  margin: 4px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: #0e0e10;
+}
+
+.bn30:hover {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+}
+
+.bn30:hover .text {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+}
+
+.l6k-main-con {
+  margin-top: 20px;
+}
+
+.lesson5-exercise {
+  margin-top: 30px;
+  margin-bottom: 10px ;
+  font-size: 30px;
+}
+
+.bn54 {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 45px;
+  width: 130px;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.bn54 .bn54span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.bn54:hover {
+  animation: bn54rotate 0.7s ease-in-out both;
+}
+
+.bn54:hover .bn54span {
+  animation: bn54storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes bn54rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bn54storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+.l5-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
