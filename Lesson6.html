@@ -9,6 +9,10 @@
 
   <link rel="stylesheet" href="Lesson6.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
   <script src="Lesson6.js"></script>
 </head>
 <body>
@@ -204,93 +208,94 @@
     </div>
 
     <div class="lesson5-exercise"> Cart Quantity</div>
+    <div class="lesson5-desc">Open the Console before clicking any buttons.</div>
     
     <div class="l5-flex">
 
+      <button class="navigation-link" onclick="
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
 
-    <button class="bn54" onclick="
-        console.log(`Cart quantity: ${cartQuantity}`);">
-          <span class="bn54span">
-            Show Quantity</span>
-        </button>
+      <button class="navigation-link" onclick="
+      if (cartQuantity + 1 > 10) {
+        alert('The cart is full! Checkout first before adding new items!')
+      } else {
+        console.log(cartQuantity +=1);
+      }
+    ">Add to cart</button>
 
 
-        <button onclick="
-        if (cartQuantity + 1 > 10) {
-          alert('The cart is full');
-        } else {
-          cartQuantity++;
-          console.log(`Cart quantity: ${cartQuantity}`);
-        }
-      ">Add to Cart</button>
-    
-   
+    <button class="navigation-link" onclick="
+      if (cartQuantity +2 >10) {
+        alert('The cart is full! Checkout first before adding new items!')
+      } else {
+        console.log(cartQuantity +=2);
+      }
+    ">+2</button>
 
-    <button class="bn54" onclick="
-    cartQuantity += 2;
-    console.log(`Cart quantity: ${cartQuantity}`);">
-      <span class="bn54span">
-        +2</span>
-    </button>
+    <button class="navigation-link" onclick="
+       if (cartQuantity +3 > 10) {
+        alert('The cart is full! Checkout first before adding new items!')
+      } else {
+        console.log(cartQuantity +=3);
+      }
+    ">+3</button>
 
-    <button class="bn54" onclick="
-    cartQuantity = cartQuantity + 3;
-    console.log(`Cart quantity: ${cartQuantity}`);">
-      <span class="bn54span">
-        +3</span>
-    </button>
+    <button class="navigation-link" onclick="
+      if (cartQuantity +4 > 10) {
+        alert('The cart is full! Checkout first before adding new items!')
+      } else {
+        console.log(cartQuantity +=4);
+      }
+    ">+4</button>
 
-    <button class="bn54" onclick="
-    cartQuantity += 4;
-    console.log(`Cart quantity: ${cartQuantity}`);">
-      <span class="bn54span">
-        +4</span>
-    </button>
+    <button class="navigation-link" onclick="
+      if (cartQuantity +5 > 10) {
+        alert('The cart is full! Checkout first before adding new items!')
+      } else {
+        console.log(cartQuantity +=5);
+      }
+    ">+5</button>
 
-    <button class="bn54" onclick="
-    cartQuantity += 5;
-    console.log(`Cart quantity: ${cartQuantity}`);">
-      <span class="bn54span">
-        +5</span>
-    </button>
+    <!-- vvv This code was changed. vvv -->
+    <button  class="navigation-link" onclick="
+      if (cartQuantity - 1 < 0) {
+        alert('Not enough items in the cart!');
+      } else {
+        console.log(cartQuantity -=1);
+      }
+      ">Remove from cart</button>
 
-    
-    <button class="bn54" onclick="
-    cartQuantity--;
-    console.log(`Cart quantity: ${cartQuantity}`);">
-      <span class="bn54span">
-        Remove from cart</span>
-    </button>
+    <button class="navigation-link" onclick="
+       if (cartQuantity - 2 < 0) {
+        alert('Not enough items in the cart!');
+      } else {
+        console.log(cartQuantity -=2);
+      }
+    ">-2</button>
 
-    <button class="bn54" onclick="
-    cartQuantity -= 2;
-    console.log(`Cart quantity: ${cartQuantity}`);">
-      <span class="bn54span">
-        -2</span>
-    </button>
-
-    <button class="bn54" onclick="
-    cartQuantity -= 3;
-    console.log(`Cart quantity: ${cartQuantity}`);">
-      <span class="bn54span">
-        -3</span>
-    </button>
-
+    <button class="navigation-link" onclick="
+       if (cartQuantity - 3 < 0) {
+        alert('Not enough items in the cart!');
+      } else {
+        console.log(cartQuantity -=3);
+      }
+    ">-3</button>
     <!-- ^^^ This code was changed. ^^^ -->
 
-    <button class="bn54" onclick="
-    cartQuantity = 0;
+    <button class="navigation-link" onclick="
+      cartQuantity = 0;
       console.log('Cart was reset.');
-      console.log(`Cart quantity: ${cartQuantity}`);">
-      <span class="bn54span">
-        Reset Cart</span>
-    </button>
-
-    </div>
-    
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Reset Cart</button>
+   </div>
     </div>
   </section>
 
+  
 
+<footer class="footer-main-con">
+  <div class="footer">Made by Jonelle. October 10, 2024</div>
+</footer>
 </body>
 </html>
