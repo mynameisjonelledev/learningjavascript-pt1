@@ -173,3 +173,49 @@ console.log(convertLength2(21, 'km', 'miles'));
 console.log(convertLength2(21, 'km', 'km'));
 
 console.log(convertLength2(23, 'miles', 'miles'));
+
+
+
+/* Lesson 7 Exercises - Functions */
+/* 7j */
+
+let calculation = '';
+
+function updateCalculation(value) {
+  calculation += value;
+  console.log(calculation);
+}
+
+/* 7k */
+
+let cartQuantity = 0;
+
+function updateCartQuantity(change) {
+  if (cartQuantity + change > 10) {
+    alert(`The cart is full! Checkout first before adding new items!`);
+    console.log(`The cart is full! Checkout first before adding new items!`);
+  
+  } else if (cartQuantity + change < 0) {
+    alert(`Not enought items on cart!`)
+    console.log(`Not enought items on cart!`);
+  
+  } else if (cartQuantity += change) {
+    console.log(`Cart quantity: ${cartQuantity}`);
+  }
+}
+
+/* 7l */
+
+function updateCartQuantity2(change) {
+  if (cartQuantity + change > 10) {
+    alert(`The cart is full! Checkout first before adding new items!`);
+    console.log(`The cart is full! Checkout first before adding new items!`);
+    return;
+  } 
+
+  if (cartQuantity + change < 0) {
+    alert(`Not enought items on cart!`)
+    console.log(`Not enought items on cart!`);
+    return;
+  }
+}
