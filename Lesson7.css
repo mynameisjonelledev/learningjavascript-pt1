@@ -105,3 +105,39 @@ a {
   justify-content: center;
   margin: 10px;
 }
+
+.calculator-con {
+  border: 2px solid black;
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.calculator-con button {
+  border-radius: 10px;
+  border:none;
+  padding: 10px;
+  font-size: large;
+  cursor: pointer;
+
+}
+
+.footer-main-con {
+  margin-bottom: -10px;
+  background-color: lightgreen;
+  margin-top: 30px;
+  color: black;
+  padding: 5px;
+  font-style: italic;
+  text-align: center;
+}
+
+.cart-con {
+  margin-top: 30px;
+}
+
+.cart-con button {
+  color: white;
+  border: none;
+  background-color: #344e41;
+}
