@@ -116,8 +116,169 @@
           <img src="https://iili.io/2dfhmdu.jpg" class="" alt="">
         </div>
 
-        
-      </section>
-  
+        <div class="l7-img-con">
+          <img src="https://i.postimg.cc/fyzzd1cv/328052985-cd652edb-a11c-4812-96b6-9555fecb3c58.png" class="l7a-c" alt="">
+        </div>
+
+        <div class="l7c-con">
+          <img src="" class="" alt="">
+        </div>
+</section>
+
+<section class="calculator-con">
+  <button onclick="
+        updateCalculation('1');
+      ">1</button>
+
+      <button onclick="
+       updateCalculation('2');
+      ">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      ">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      ">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      ">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      ">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      ">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      ">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      ">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+       updateCalculation('0');
+      ">0</button>
+
+      <button onclick="
+        updateCalculation(' . ');
+      ">.</button>
+
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+        console.log(calculation);
+      ">=</button>
+
+      <button onclick="
+       updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+      ">Clear</button>
+    </p>
+</section>
+
+<!-- CART QUANTITY -->
+<section class="cart-con">
+  <div class="lesson5-exercise"> Cart Quantity</div>
+    <div class="lesson5-desc">Open the Console before clicking any buttons.</div>
+    
+    <div class="l5-flex">
+
+      <button class="navigation-link" onclick="
+      console.log(`Cart quantity:${cartQuantity}`);
+    ">Show Quantity</button>
+
+      <button class="navigation-link" onclick="
+      updateCartQuantity(1);
+    ">Add to cart</button>
+
+
+    <button class="navigation-link" onclick="
+      updateCartQuantity(2);
+    ">+2</button>
+
+    <button class="navigation-link" onclick="
+      updateCartQuantity(3);
+    ">+3</button>
+
+    <button class="navigation-link" onclick="
+     updateCartQuantity(4);
+    ">+4</button>
+
+    <button class="navigation-link" onclick="
+     updateCartQuantity(5);
+    ">+5</button>
+
+    <!-- vvv This code was changed. vvv -->
+    <button  class="navigation-link" onclick="
+      updateCartQuantity(-1);
+      ">Remove from cart</button>
+
+    <button class="navigation-link" onclick="
+      updateCartQuantity(-2);
+    ">-2</button>
+
+    <button class="navigation-link" onclick="
+      updateCartQuantity(-3);
+    ">-3</button>
+    <!-- ^^^ This code was changed. ^^^ -->
+
+    <button class="navigation-link" onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Reset Cart</button>
+    </div>
+  </div>
+</section>
+
+<div class="l7c-con">
+  <img src="https://i.postimg.cc/SKJLcNLg/hgkh.jpg" class="" alt="">
+</div>
+
+<div class="l7c-con">
+  <img src="https://i.postimg.cc/bv7nb0wv/hgkh.jpg" class="" alt="">
+</div>
+
+<div class="l7c-con">
+  <img src="https://i.postimg.cc/xjRkTVM8/hgkh.jpg" class="" alt="">
+</div>
+
+
+<footer class="footer-main-con">
+  <div class="footer">Made by Jonelle. October 17, 2024</div>
 </body>
 </html>
