@@ -81,3 +81,17 @@ a {
   border-radius: 20px;
   
 }
+
+.heads-tails-title {
+  margin-top: 20px;
+}
+
+.footer-main-con {
+  margin-bottom: -10px;
+  background-color: yellow;
+  margin-top: 30px;
+  color: black;
+  padding: 5px;
+  font-style: italic;
+  text-align: center;
+}
