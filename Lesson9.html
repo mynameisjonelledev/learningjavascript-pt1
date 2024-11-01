@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9 : Document Object Model (DOM)</title>
+
+  <link rel="icon" type="images/x-icon" href="https://cdn.icon-icons.com/icons2/1910/PNG/512/papaya_121460.png">
+
+  <link rel="stylesheet" href="Lesson9.css">
+
+  <script src="Lesson9.js"></script>
+</head>
+<body>
+  <div class="head-container">Lesson 9 : Document Object Model (DOM)</div>
+ 
+
+  <nav class="navigation-main-con">
+    <button class="navigation-link"><a href="index.html">Home</a></button>
+
+    <button class="navigation-link"><a href="Lesson4.html">Lesson 4</a></button>
+    <button class="navigation-link"><a href="Lesson5.html">Lesson 5</a></button>
+    <button class="navigation-link"><a href="Lesson6.html">Lesson 6</a></button>
+    <button class="navigation-link"><a href="Lesson7.html">Lesson 7</a></button>
+    <button class="navigation-link"><a href="Lesson8.html">Lesson 8</a></button>
+
+    <a href="Lesson9.html">
+      <button onclick="lesson9Dom ();"
+      class="lesson9">Lesson 9</a></button>
+
+    <button class="navigation-link"><a href="Lesson10.html">Lesson 10</a></button>
+    <button class="navigation-link"><a href="#">Lesson 11</a></button>
+    <button class="navigation-link"><a href="#">Lesson 12</a></button>
+  </nav>
+
+  <section class="opening-con">
+    <div class="img-con">
+      <img src="https://cdn.icon-icons.com/icons2/1910/PNG/512/papaya_121460.png" class="img-img" alt="">
+    </div>
+    <div class="img-details">This tropical fruit has a smooth, green to yellow skin and a sweet, orange flesh inside. When you cut it open, you’ll find a central cavity filled with small black seeds. Papayas are known for their rich flavor and are packed with vitamins A and C, as well as digestive enzymes like papain. They can be enjoyed fresh, in smoothies, or as part of fruit salads. Their tropical taste makes them a refreshing addition to many dishes!</div>
+    <div class="opening-hr-con"></div>
+  </section>
+
+  <section class="l9-dom-con">
+    <div class="l9-title">DOM Projects</div>
+    <p>Youtube Subscribe Button</p>
+
+    <button onclick="
+    const buttonElement = document.querySelector('.js-subscribe-button');
+
+    if(buttonElement.innerHTML === 'Subscribe'){
+      buttonElement.innerHTML = 'Subscribed';
+    } else {
+      buttonElement.innerHTML = 'Subscribe'
+    }
+
+
+    " 
+    class="js-subscribe-button">Subscribe</button>
+
+
+    <p>Who is Jacob?</p>
+    <button class="js-jacob" onclick="
+    const jacobElement = document.querySelector('.js-jacob');
+
+    if (jacobElement.innerHTML === 'Jacob') {
+      jacobElement.innerText = 'Bani';
+    } else {
+      jacobElement.innerHTML = 'Jacob';
+    }
+    
+    ">
+      Jacob</button>
+
+   
+  </section>
+
+  <section class="rock-paper-main-con">
+    <div class="rock-paper-title" title="Current music playing in my head: Jona, ayoko sa pusa mo!">Rock Paper Scissors</div>
+    <div class="rock-paper-btn">
+
+
+    <!-- AND Operator is used here -->
+        <button onclick="
+        playGame('rock');
+        greetingMessage();
+        " >Rock</button>
+
+        <button onclick=" 
+        playGame ('paper');
+        greetingMessage();
+        ">Paper</button>
+
+        <button onclick="
+        playGame('scissors');
+        greetingMessage();
+        " >Scissors</button>
+
+        <p class="js-result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score"></p>
+
+
+        <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score'); // para maremove ung save sa local storage
+        updateScoreElement ();
+        console.log(score);
+        ">
+          Reset Score
+        </button>
+
+       <!-- Hindi talaga to kasali. Sinama ko lang. -->
+        <!-- badtrip na i love challenges na 'yan.'-->
+        <button onclick="
+        console.log(`Wins:${score.wins}, Losses: ${score.losses}, Ties:${score.ties}`);
+    alert(`Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+    
+    greetingMessage();
+    ">Check Score</button>
+      
+      <div class="rock-paper-link"> <a href="#">Click here</a> to see the final version of the project.</div>
+  </section>
+  
+
+  <p>Amazon Shipping Calculator</p>
+  <input type="number" placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeydown (event);
+  ">
+  
+  <button onclick="
+  calculateTotal();
+  " >Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+
+
+  <p>Meow</p>
+  <input type="text" placeholder="Things to remember" class="js-things" onkeydown="addThings (event);">
+ 
+  <button onclick="thingsToRemember ();" >
+    Add</button>
+
+    <p class="thingsAdd"></p>
+    <p class="thingsAdd2"></p>
+  
+    <div class="opening-hr-con"></div>
+
+    <section class="l9exe">
+      <div class="l9-title">Lesson 9 Exercises - Document Object Model (DOM)</div>
+
+      <button class="l9-button" onclick="button9 ();">9a</button>
+
+      <button class="l9b-button" onclick="button9b ();">
+        9b</button>
+
+        <div>
+          <button class="l9c-heads" onclick="
+            document.querySelector('.l9c-paragraph').innerHTML = 'You chose: heads';">
+            Heads</button>
+
+          <button class="l9c-tails" onclick="
+          document.querySelector('.l9c-paragraph').innerHTML = 'You chose: tails';">
+            Tails</button>
+          <p class="l9c-paragraph"></p>
+        </div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <input type="text" placeholder="Name" class="js-name" onkeydown="l9dExerciseOnKeyDown (event);">
+
+        <button class="js-name-button" onclick="l9dExercise ();">Submit</button>
+        <p class="js-name-output"></p>
+    </section>
+
+    <section class="l9d-onwards">
+      <div class="l9d-onwards-title">Challenge Exercises</div>
+
+      <code>Yung sagot dito sa 9g. Ay ng nasa taas na Amazon Shipping Calculator!</code>
+
+      <div class="l9h-div">
+        <input type="text" placeholder="Type something" class="l9h-input" onkeyup="l9hExercise ();">
+        <p class="l9h-paragraph"></p>
+      </div>
+  
+    </section>
+
+    <!-- CART QUANTITY -->
+<section class="cart-con">
+  <div class="lesson5-exercise"> Cart Quantity</div>
+    <div class="lesson5-desc">Open the Console before clicking any buttons.</div>
+    
+    <div class="l5-flex">
+
+      <button class="navigation-link" onclick="
+      document.querySelector('.l9j-paragraph').innerHTML = `Cart quantity:${cartQuantity}`;
+    ">Show Quantity</button>
+
+      <button class="navigation-link" onclick="
+      updateCartQuantity(1);
+    ">Add to cart</button>
+
+
+    <button class="navigation-link" onclick="
+      updateCartQuantity(2);
+    ">+2</button>
+
+    <button class="navigation-link" onclick="
+      updateCartQuantity(3);
+    ">+3</button>
+
+    <button class="navigation-link" onclick="
+     updateCartQuantity(4);
+    ">+4</button>
+
+    <button class="navigation-link" onclick="
+     updateCartQuantity(5);
+    ">+5</button>
+
+    <!-- vvv This code was changed. vvv -->
+    <button  class="navigation-link" onclick="
+      updateCartQuantity(-1);
+      ">Remove from cart</button>
+
+    <button class="navigation-link" onclick="
+      updateCartQuantity(-2);
+    ">-2</button>
+
+    <button class="navigation-link" onclick="
+      updateCartQuantity(-3);
+    ">-3</button>
+    <!-- ^^^ This code was changed. ^^^ -->
+
+    <button class="navigation-link" onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+      document.querySelector('.l9j-paragraph').innerText = `Cart quantity: ${cartQuantity}`;
+    ">Reset Cart</button>
+
+    <p class="l9j-paragraph"></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Calculator Con -->
+<section class="calculator-con">
+
+  <p class="calculator-screen">Hello!</p>
+  <button onclick="
+        updateCalculation('1');
+      ">1</button>
+
+      <button onclick="
+       updateCalculation('2');
+      ">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      ">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      ">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      ">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      ">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      ">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      ">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      ">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+       updateCalculation('0');
+      ">0</button>
+
+      <button onclick="
+        updateCalculation(' . ');
+      ">.</button>
+
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        document.querySelector('.calculator-screen').innerText = eval(calculation);
+      ">=</button>
+
+      <button onclick="
+       updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        document.querySelector('.calculator-screen').innerText = 'Hello!';
+      ">Clear</button>
+    </p>
+</section>
+    
+    
+</body>
+</html>
