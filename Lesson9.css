@@ -107,3 +107,11 @@ a {
   width: 110px;
   text-align: center;
 }
+
+
+.footer-main-con {
+  background-color: #522B29;
+  text-align: center;
+  padding: 5px;
+  color: white;
+}
