@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 10 : HTML,CSS, and JavaScript Together</title>
+
+  <link rel="icon" type="images/x-icon" href="https://cdn.icon-icons.com/icons2/3419/PNG/512/pomegranate_fruit_food_icon_218367.png">
+
+  <link rel="stylesheet" href="Lesson10.css">
+
+  <script src="Lesson10.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="head-container">Lesson 10 : HTML,CSS, and JavaScript Together</div>
+ 
+
+  <nav class="navigation-main-con">
+    <button class="navigation-link"><a href="index.html">Home</a></button>
+    <button class="navigation-link"><a href="Lesson4.html">Lesson 4</a></button>
+    <button class="navigation-link"><a href="Lesson5.html">Lesson 5</a></button>
+    <button class="navigation-link"><a href="Lesson6.html">Lesson 6</a></button>
+    <button class="navigation-link"><a href="Lesson7.html">Lesson 7</a></button>
+    <button class="navigation-link"><a href="Lesson8.html">Lesson 8</a></button>
+    <button class="navigation-link"><a href="Lesson9.html">Lesson 9</a></button>
+    <button class="navigation-link"><a href="Lesson10.html">Lesson 10</a></button>
+    <button class="navigation-link"><a href="Lesson11.html">Lesson 11</a></button>
+    <button class="navigation-link"><a href="#">Lesson 12</a></button>
+  </nav>
+
+  <section class="opening-con">
+    <div class="img-con">
+      <img src="https://cdn.icon-icons.com/icons2/3419/PNG/512/pomegranate_fruit_food_icon_218367.png" class="img-img" alt="">
+    </div>
+    <div class="img-details">This unique fruit has a tough, leathery skin that ranges from deep red to yellow. Inside, it’s filled with juicy, ruby-red seeds known as arils, which are sweet and tart. Pomegranates are packed with antioxidants, vitamins C and K, and dietary fiber. They can be eaten fresh, juiced, or used in salads and desserts. Their striking appearance and delightful flavor make pomegranates a beautiful and nutritious addition to any meal!</div>
+    <div class="opening-hr-con"></div>
+  </section>
+  
+  <div class="youtube-subs-btn-con">
+    <p>Youtube Subscribe Button</p>
+  <button onclick="subscribe ();" 
+    class="js-subscribe-button subscribe-button" title="Subscribe">
+    Subscribe
+    </button>
+  </div>
+  
+
+
+  
+    <p>Amazon Shipping Calculator</p>
+  <input type="number" placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="handleCostKeydown (event);
+  ">
+  
+  <button onclick="
+  calculateTotal();
+  " class="calculate-button">Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+  <p>Rock Paper Scissors</p>
+  <a href="rock-paper-scissors.html" target="_blank">Click here</a>
+
+
+  <footer class="footer-main-con">
+    <div class="footer">Made by Jonelle. November 7, 2024</div>
+</body>
+</html>
