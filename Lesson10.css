@@ -122,8 +122,111 @@ p {
   cursor: pointer;
 }
 
-a {
+.click-a {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: underline;
   color: blue;
 }
+
+.l10exe {
+   margin-top: 40px;
+   margin-bottom: 40px;
+}
+
+.l10exe-title {
+  font-size: large;
+}
+
+.l10-cart {
+  margin-bottom: 20px;
+  background-color: rgb(255,216,20);
+  border: none;
+  padding: 10px 50px;
+  border-radius: 20px;
+}
+
+.l10-request {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.l10-schedule {
+   background-color: rgb(230, 230, 230);
+   border: none;
+   padding: 10px 15px;
+   border-radius: 10px;
+}
+
+.l10d {
+ margin: 20px 0px;
+}
+
+.toggle-button , .toggle-button2 , .toggle-button3 {
+  border: none;
+  padding: 10px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.is-toggled {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rock {
+  margin-top: 60px;
+}
+
+.calculator-con {
+  margin-top: 30px;
+  background-color: black;
+  width: 250px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+.calculator-screen {
+  border: 2px solid black;
+  width: 220px;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+
+.cal-btn, .operator-btn {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 15px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.clear-btn {
+  padding: 15px 7px;
+  border-radius: 100px;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border: none;
+}
+
+.operator-btn {
+  background-color: rgb(254, 160, 10);
+}
+
+
