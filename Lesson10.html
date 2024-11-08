@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="Lesson10.css">
 
-  <script src="Lesson10.js"></script>
+  
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,13 +59,142 @@
   calculateTotal();
   " class="calculate-button">Calculate</button>
 
-  <p class="js-total-cost"></p>
+  <p class="js-total-cost">sda</p>
+  <p class="js-error-message error-message">mo</p>
 
-  <p>Rock Paper Scissors</p>
-  <a href="rock-paper-scissors.html" target="_blank">Click here</a>
+
+
+
+
+
+  <p class="rock">Rock Paper Scissors</p>
+  <a href="rock-paper-scissors.html" target="_blank" class="click-a">Click here</a>
+
+  <section class="l10exe">
+    <div class="l10exe-title">Lesson 10 Exercises - HTML, CSS, and JavaScript Together</div>
+
+    <div>
+      <p>Amazon button</p>
+      <button class="l10-cart">Add to Cart</button>
+    </div>
+
+    <div>
+      <p>Uber buttons</p>
+      <button class="l10-request">Request now</button>
+      <button class="l10-schedule">Schedule for later</button>
+    </div>
+
+    <button class="js-button">Test</button>
+    
+    <div class="l10d">
+      <button class="toggle-button js-toggle-button" onclick="toggleButton ('.js-toggle-button')">
+        Gaming</button>
+
+    
+    <button class="toggle-button js-toggle-button2" onclick="
+      toggleButton ('.js-toggle-button2')">
+      Music</button>
+
+    <button class="toggle-button js-toggle-button3" onclick="
+    toggleButton ('.js-toggle-button3')">
+        Tech</button>
+          
+    </div>
+  
+
+  </section>
+
+
+  <!-- Calculator Con -->
+<section class="calculator-con">
+
+  <p class="calculator-screen">Hello!</p>
+  <button onclick="
+        updateCalculation('1');
+      " class="cal-btn">1</button>
+
+      <button onclick="
+       updateCalculation('2');
+      "class="cal-btn">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      "class="cal-btn">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      " class="operator-btn">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      "class="cal-btn">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      "class="cal-btn">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      "class="cal-btn">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      "class="operator-btn">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      "class="cal-btn">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      "class="cal-btn">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      "class="cal-btn">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      "class="operator-btn">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+       updateCalculation('0');
+      "class="cal-btn">0</button>
+
+      <button onclick="
+        updateCalculation(' . ');
+      "class="cal-btn">.</button>
+
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        document.querySelector('.calculator-screen').innerText = eval(calculation);
+      "class="cal-btn">=</button>
+
+      <button onclick="
+       updateCalculation(' / ');
+      "class="operator-btn">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        document.querySelector('.calculator-screen').innerText = 'Hello!';
+      "class="clear-btn">Clear</button>
+    </p>
+</section>
 
 
   <footer class="footer-main-con">
     <div class="footer">Made by Jonelle. November 7, 2024</div>
+  <script src="Lesson10.js"></script>
 </body>
 </html>
