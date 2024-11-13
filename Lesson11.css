@@ -70,3 +70,8 @@ a {
   padding: 10px;
   text-align: center;
 }
+
+.todolist-space {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
