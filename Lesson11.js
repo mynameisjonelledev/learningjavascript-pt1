@@ -220,3 +220,94 @@ function countPositive(nums) {  //✅//
 }
 
 console.log(countPositive([1,-3,5]));
+
+
+
+
+// CHALLENGE EXERCISES //
+
+// 11l - Create a function minMax(nums) that takes an array of
+//       numbers and returns an object with the minimum
+//       and maximum numbers in the array (do this using a loop
+//       instead of using something like Math.min).
+
+function minMax(nums) { //✅//
+  const result = {
+    min: nums[0],
+    max: nums[0]
+  };
+
+  /* const result = {
+    min: null,
+    max: null
+  }; */
+
+  for (let i = 0; i < nums.length; i++) { //✅//
+    const value = nums[i];
+
+    // If the value is less than the min,
+    // update the min.
+   if (value < result.min) {
+    result.min = value;
+  }
+
+  // If the value is greater than the max,
+  // update the max.
+  if (value > result.max) {
+  result.max = value;
+
+  } 
+
+// 11m - Update exercise 11l to also handle these cases:
+
+ // If the min is null OR the value is
+ // less than the min, update the min.
+ if (result.min === null || value < result.min) {
+  result.min = value;
+ }
+
+// If the max is null OR the value is
+// greater than the max, update the max.
+ if (result.max === null || value > result.max) {
+  result.max = value;
+ }
+
+  return result;  //✅//
+}
+
+}
+
+console.log(minMax([1, -3, 5]));
+console.log(minMax([-2, 3, -5, 7, 10]));
+
+console.log(minMax([]));
+console.log(minMax([3]));
+
+
+
+
+// 11n - Create a function countWords(words) that takes an 
+//       array of strings and returns an object with how
+//       many times each string appeared. 
+
+function countWords(words) {  //✅//
+  const result = {}
+
+  for (let i = 0; i < words.length; i++) {  //✅//
+    const word = words[i]; 
+
+    /* If it’s NOT in the result: We add it to result and give it a count of 1 (because we’ve seen it once).
+    If it’s already in the result: We just add 1 more to its count (because we saw it again). */
+
+    if (!result[word]) {
+      result[word] = 1;
+    } else {
+      result[word]++;
+    }
+    
+  }
+
+  return result;
+}
+
+console.log(countWords(['banana', 'apple', 'apple', 'bani']));
