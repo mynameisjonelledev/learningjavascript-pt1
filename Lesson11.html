@@ -50,16 +50,20 @@
 
   <section>
     <p>Todo List Practice 1</p>
-    <input placeholder="Todo name" type="text" required class="js-name-input" onkeydown="onKeyDownInput (event);">
+    
+    <div class="todo-input-grid">
+      <input placeholder="Todo name" type="text" required class="js-name-input" onkeydown="onKeyDownInput (event);">
 
-    <button type="submit" onclick="addTodo();">Add</button>
+      <input type="date" class="js-due-date-input">
+      
+      <button type="submit" onclick="addTodo();">Add</button>
+    </div>
+    
 
   </section>
     
   <section class="todolist-space">
-    <div class="js-todo-list">
-      
-    </div>
+    <div class="js-todo-list todo-grid"></div>
   </section>
   
   <script src="Lesson11.js"></script>
