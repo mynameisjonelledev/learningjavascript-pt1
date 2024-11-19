@@ -17,7 +17,7 @@ function renderTodoList () {
     `<div>${name}</div>
      <div>${dueDate}</div>
      
-     <button onclick="
+     <button class="delete-todo-button" onclick="
      todoList.splice(${i}, 1);
      renderTodoList ();
      ">Delete</button>
@@ -332,3 +332,158 @@ function countWords(words) {  //✅//
 }
 
 console.log(countWords(['banana', 'apple', 'apple', 'bani']));
+
+
+
+// 11o - Create an array of strings, loop over the array, and
+//       check if the string 'search' is inside the array. If
+//       it is ,console.log() the index of 'search' in the array.
+//       If not, console.log '-1'.
+
+  let words = ['hello', 'world', 'search', 'good'];
+
+  // Set the index to -1 at the start (so we'll assume
+  // the string 'search' doesn't exist in the array).
+  // If we find the string 'search' in the array, we
+  // will update the index.
+  let index = -1;
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'search') {
+      index = i;
+    }
+  }
+
+  console.log(index);
+
+  words = ['not', 'found']
+  index = -1;
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'search') {
+      index = i;
+    }
+  }
+
+  console.log(index);
+
+
+
+// 11p - Modify 11o so that if 'search' appears multiple
+//       times in the array, it will console.log() the index
+//       of the first appearance of 'search'. Use break;
+
+
+words = [' hello', 'world', 'search', 'good', 'search']; //✅//
+index = -1; //✅//
+
+for (let i = 0; i < words.length; i++) {  //✅//
+  if (words[i] === 'search') { //✅//
+    index = i;  //✅//
+  // Once we find 'search', immediately exit
+  // the loop since we want the index of the
+  // first appearance of 'search'.
+    break;  //✅//
+  }
+}
+
+console.log(index);
+
+
+words = ['not', 'found'];
+index = -1;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === 'search') {
+    index = i;
+    break;
+  }
+}
+
+console.log(index);
+
+
+
+// 11q - Create a function findIndex(array,word) that searches
+//       an array for a string(in the 'word' parameter) and
+//       returns the index of the first appearance of the
+//       string. If it doesn't exist in the array, return -1.
+
+function findIndex(array,word) {   //✅//
+  for (let i = 0; i < array.length; i++) {   //✅//
+    if (array[i] === word) {   //✅//
+
+      // Instead of creating an accumulator
+      // variable and updating it in the loop,
+      // we can just return i directly, when
+      // we find it since this is a function.
+
+      return i;  //✅//
+      
+    }
+  }
+
+  // If the function has not returned by now,
+  // logically that means the word must not
+  // exist in the array, so we'll return -1.
+
+
+  return -1;
+}
+
+console.log(findIndex(['green','red','blue', 'red'],'red'));
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+
+
+// 11r - Create a function removeEgg(foods) that takes an array
+//       of strings and returns an array where the string 'egg'
+//       is remove. (Hint: loop through the array and check if
+//       each string is 'egg'. If it is 'egg', use 'continue;' to
+//        skip it. If it's not 'egg', add it to the result.)
+
+function removeEgg(foods) { //✅//
+  let result = [];  //✅//
+
+  for (let i = 0; i < foods.length; i++) {  //✅//
+    if (foods[i] === 'egg') { //✅//
+      continue; //✅//
+    }
+    // We don't need to have an else here because
+    // the only way to reach this code is if the 
+    // if-statement above is false.
+    result.push(foods[i]);  //✅//
+  }
+
+  return result;  //✅//
+}
+
+console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+
+
+
+// 11s - Update exercise 11r to only remove the first 2 eggs 
+//       from the array.
+
+function removeEgg(foods) {
+  const result = [];
+  let eggsRemoved = 0;
+
+  for (let i = 0; i < foods.length; i++) {
+    // Only skip 'egg' if we removed less than 2
+    // of them so far.
+    if (foods[i] === 'egg' && eggsRemoved < 2) {
+      // Update the number of 'egg' we have removed.
+      // This must be done before continue, otherwise,
+      // doing continue first will just skip this code.
+      eggsRemoved++;
+      continue;
+    }
+
+    result.push(foods[i]);
+  }
+
+  return result;
+}
+
+console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
