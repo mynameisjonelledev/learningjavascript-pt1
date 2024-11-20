@@ -487,3 +487,102 @@ function removeEgg(foods) {
 }
 
 console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+
+// 11t - Arrays have a method called .reverse(), which reverses
+//       the order of the values in the array.Using .reverse(),
+//       update exercise 11s to only remove the last 2 eggs
+//       from the array.
+
+function removeEgg(foods) {
+  // To remove the last 2 'egg', reverse the array first.
+  const reversedFoods = foods.reverse();
+
+  const result = [];
+  let eggsRemoved = 0;
+
+  for (let i = 0; i < reversedFoods.length; i++) {
+    if (reversedFoods[i] === 'egg' && eggsRemoved < 2) {
+      eggsRemoved++;
+      continue;
+    }
+
+    result.push(reversedFoods[i]);
+  }
+
+  // At the end, remember to .reverse() back the result.
+  return result.reverse();
+}
+
+console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+
+
+
+// 11u - In exercise 11t, one problem with reverse() is that it
+//       doesn't create a copy of the array it is reversing. It
+//       modifies the original array. Update the code so the
+//       function does not modify the original array. (Hint: use
+//       the .slice() method to create a copy of an array's 
+//       values.)
+
+function removeEgg(foods) {
+  // To prevent modifying the original array, we
+  // can create a copy of the array using .slice()
+  const foodsCopy = foods.slice();
+  const reversedFoods = foodsCopy.reverse();
+
+  // Advanced technique:
+  // Since foods.slice() results in an array, we
+  // can also use .reverse() directly like this:
+  // foods.slice().reverse();
+  
+  // This technique is called "method chaining"
+  // because we use one method after another
+  // (like a chain of methods).
+  const result = [];
+  let eggsRemoved = 0;
+
+  for (let i = 0; i < reversedFoods.length; i++) {
+    if (reversedFoods[i] === 'egg' && eggsRemoved < 2) {
+      eggsRemoved++;
+      continue;
+    }
+
+    result.push(reversedFoods[i]);
+  }
+
+  return result.reverse();
+}
+
+const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+console.log(removeEgg(foods));
+console.log(foods);
+
+// This is my answer. This code is working pero may issues // 
+// ⬇️⬇️⬇️ //
+
+/* function removeEgg() {
+
+  let foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+  const foodsCopy = foods.slice();  //✅//
+  const reversedFoods = foodsCopy.reverse();  //✅//
+
+  const result = []; //✅//
+  let eggsRemoved = 0; //✅//
+
+  for (let i = 0; i < reversedFoods.length; i++) {  //✅//
+    if (reversedFoods[i] === 'egg' && eggsRemoved < 2) {  //✅//
+      eggsRemoved++;  //✅//
+      continue; //✅//
+    }
+
+    result.push(reversedFoods[i]);  //✅//
+  }
+
+  return result.reverse();  //✅//
+
+}
+
+console.log(removeEgg());
+*/ 
