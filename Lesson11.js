@@ -586,3 +586,87 @@ console.log(foods);
 
 console.log(removeEgg());
 */ 
+
+
+
+// Challenge Exercises 
+
+// 11v - We'll do the famous FizzBuzz problem. Create a loop
+//       that displays 1 to 20 in the console.If the number
+//       is divisible by 3, display 'Fizz' instead of the
+//       number. If it's divisible by 5, display 'Buzz' instead.
+//       If it's divisible by 3 and 5, display 'FizzBuzz' 
+//       instead. (Reminder: divisible by 3 means num % 3 === 0).
+
+
+for (let i = 1; i <= 20; i++) {
+  if (i % 3 === 0 && i % 5 === 0) { // Ang sabi ni chatgpt, unahin
+    console.log('FizzBuzz');        // na ang may && condition 
+  } else if (i % 3 === 0) {         // dahil kapag inuna mo ung
+    console.log('Fizz');            // walang ganun. Hindi na
+  } else if (i % 5 === 0) {         // makakarating ung loop dun
+    console.log('Buzz');            // at maglalabas na sya ng 
+  } else {                          // maling answers. 
+    console.log(i);
+  }
+}
+// ^^ Praise God. Tama ung code ko ang it works!  ^^
+
+
+
+// 11w - Create a copy of exercise 11q, where we created
+//       findIndex(). Below it, create a function unique(array)
+//       that takes an array of strings and returns an array
+//       where each string only appears once (there are no 
+//       duplicates). Try to use findIndex() function in your
+//       solution.
+
+function findIndex(array,word) {   //✅//
+  for (let i = 0; i < array.length; i++) {   //✅//
+    if (array[i] === word) {   //✅//
+
+     return i;  //✅//
+      
+    }
+  }
+
+  return -1;
+}
+
+console.log(findIndex(['green','red','blue', 'red'],'red'));
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+
+// answers starts here //
+
+function findIndex(array, word) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === word) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+function unique(array) {
+  const result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const word = array[i];
+
+    // Using the findIndex() function from above, we
+    // can check if the string is already in the
+    // result array. If it's not in the result array
+    // (index is -1), then add it to the result array.
+    if (findIndex(result, word) === -1) {
+      result.push(word);
+    }
+  }
+
+  return result;
+}
+
+console.log(unique(['green', 'red', 'blue', 'red']));
+console.log(unique(['red', 'green', 'green', 'red']));
+
+
