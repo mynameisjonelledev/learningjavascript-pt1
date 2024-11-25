@@ -138,8 +138,114 @@ function startFinished() {
 //       'Loading...', and then after 1 second, it changes to 
 //       'Finished'
 
+function updateButton() {
+  const button = document.querySelector('.js-start-finish');
+  
+  button.classList.add('js-loading');
+  button.innerHTML = 'Loading...';
+  console.log('Loading...');
+  setTimeout(function() {
+    button.classList.remove('js-loading');
+    button.classList.add('js-finished');
+    button.innerHTML = 'Finished!';
+    console.log('Finished!');
+  }, 1000);
+}
 
 
 
 
+// 12e - Create the 'Add to cart' button below. When clicking this
+//       button, display the message 'Added' below the button.
+//       Then,after 2 seconds, remove the message.
 
+function addedButton() {  //✅
+  const addedMessage = document.querySelector('.added-message');  //✅
+
+  addedMessage.innerHTML = 'Added'; //✅
+
+  setTimeout(function(){  //✅
+    addedMessage.innerHTML = '';  //✅
+  }, 2000); //✅
+
+
+}
+
+
+// CHALLENGE EXERCISE 
+
+// 12f - Continuing from 12e, if we click the button, wait 1 to
+//       1.5 seconds, and then click the button again, notice
+//       that the second time, the message disappears very quickly
+//       (because the first setTimeout is still running and will 
+//       make the message disappear very soon).
+
+
+let timeoutId;
+
+function displayMessage() {
+  const messageElement = document.querySelector('.js-message');
+  messageElement.innerHTML = 'Added';
+
+  // First, cancel the previous timeout so that
+  // it doesn't remove the message too quickly.
+  clearTimeout(timeoutId);
+
+  timeoutId = setTimeout(function() {
+    messageElement.innerHTML = '';
+  }, 2000);
+}
+
+
+// 12g - Imagine we're creating a messaging app. Use 
+//       setInterval() and document.title to create the
+//       feature on the right (the title changes every 1 second).
+
+
+/* setInterval(function(){
+
+  if (document.title === 'Lesson 12 : Advanced Functions') {
+    document.title = `(${message}) New messages`;
+  } else {
+    document.title = 'Lesson 12 : Advanced Functions';
+
+  }
+}, 1000); */
+  
+
+// 12h - Continuing from 12g, instead of displaying 
+//       '(2) New messages' every time, save the number of messages
+//       in a variable: let messages = 2; 
+
+let message = 2;
+
+function addButton() {
+  const addElement = document.querySelector('.js-add-button');
+  message++;  
+}
+
+function removeButton() {
+  const removeElement = document.querySelector('.js-remove-button');
+  message--;
+}
+
+
+// 12i - Continuing from 12h:
+//       Dont let 'messages' go below 0.
+//       If messages ==== 0 stop changing the title and display
+//       'App' as the title.
+//       When messages > 0 start changing the title again.
+
+setInterval(function(){
+
+  if (document.title === 'Lesson 12 : Advanced Functions') {
+   if (message === 0) {
+      document.title = 'Lesson 12 : Advanced Functions'
+    } else if (message > 0) {
+      document.title = `(${message}) New messages`;
+    }
+  } else {
+    document.title = 'Lesson 12 : Advanced Functions';
+
+  }
+}, 1000);
