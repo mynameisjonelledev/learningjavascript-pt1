@@ -27,11 +27,43 @@ function autoPlay() {
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
-  }
-
-
-  
+  } 
 }
+
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+  playGame('rock');
+  greetingMessage();
+});
+
+document.querySelector('.js-paper-button').addEventListener('click', () => {
+  playGame('paper');
+  greetingMessage();
+});
+
+document.querySelector('.js-scissors-button').addEventListener('click', () => {
+  playGame('scissors');
+  greetingMessage();
+});
+
+document.querySelector('.js-reset-score-button').addEventListener('click' , () => {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score'); // para maremove ung save sa local storage
+  updateScoreElement ();
+  console.log(score);
+});
+
+
+document.querySelector('.js-check-score-button').addEventListener('click', () => {
+  alert(`Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+
+greetingMessage();
+});
+
+document.querySelector('.js-auto-play-button').addEventListener('click', () => {
+  autoPlay();
+});
 
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
