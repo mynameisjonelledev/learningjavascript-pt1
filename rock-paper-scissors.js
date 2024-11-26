@@ -18,7 +18,7 @@ let intervalId;
 
 function autoPlay() {
   if (!isAutoPlaying) {
-      intervalId = setInterval(function(){ // <-- 
+      intervalId = setInterval(() => { // <-- 
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
@@ -63,6 +63,16 @@ greetingMessage();
 
 document.querySelector('.js-auto-play-button').addEventListener('click', () => {
   autoPlay();
+});
+
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 'r') {
+    playGame('rock');
+  } else if (event.key === 'p') {
+    playGame('paper');
+  } else if (event.key === 's') {
+    playGame('scissors');
+  }
 });
 
 function playGame(playerMove) {
@@ -162,4 +172,18 @@ function greetingMessage() {
 function showResult () {
   document.querySelector('.js-result').innerHTML = result;
 }
+
+const credit = document.querySelector('.footers-jonelle');
+
+document.body.addEventListener('keydown', (event) => {
+  if(event.key) {
+    credit.innerHTML = `Made with love by <a href="https://mynameisjonelledev.github.io/jonellewebpage/" target="_blank">Jonel Cubio</a>.`;
+  };
+});
+
+document.body.addEventListener('click', () => {
+  credit.innerHTML = `Made with love by <a href="https://mynameisjonelledev.github.io/jonellewebpage/" target="_blank">Jonel Cubio</a>.`;
+});
+
+
 
