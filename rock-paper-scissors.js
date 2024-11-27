@@ -18,6 +18,8 @@ let intervalId;
 
 function autoPlay() {
   if (!isAutoPlaying) {
+      document.querySelector('.js-auto-play-button').innerHTML = 'Stop Playing';
+
       intervalId = setInterval(() => { // <-- 
       const playerMove = pickComputerMove();
       playGame(playerMove);
@@ -25,9 +27,20 @@ function autoPlay() {
 
     isAutoPlaying = true;
   } else {
+    document.querySelector('.js-auto-play-button').innerHTML = 'Auto Play';
+
     clearInterval(intervalId);
     isAutoPlaying = false;
   } 
+}
+
+function resetScore () {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score'); // para maremove ung save sa local storage
+  updateScoreElement ();
+  console.log(score);
 }
 
 document.querySelector('.js-rock-button').addEventListener('click', () => {
@@ -46,12 +59,7 @@ document.querySelector('.js-scissors-button').addEventListener('click', () => {
 });
 
 document.querySelector('.js-reset-score-button').addEventListener('click' , () => {
-  score.wins = 0;
-  score.losses = 0;
-  score.ties = 0;
-  localStorage.removeItem('score'); // para maremove ung save sa local storage
-  updateScoreElement ();
-  console.log(score);
+  confirmationMessage ();
 });
 
 
@@ -72,6 +80,8 @@ document.body.addEventListener('keydown', (event) => {
     playGame('paper');
   } else if (event.key === 's') {
     playGame('scissors');
+  } else if (event.key === 'a') {
+    autoPlay();
   }
 });
 
@@ -185,5 +195,22 @@ document.body.addEventListener('click', () => {
   credit.innerHTML = `Made with love by <a href="https://mynameisjonelledev.github.io/jonellewebpage/" target="_blank">Jonel Cubio</a>.`;
 });
 
+function confirmationMessage () {
+  document.querySelector('.js-confirmation-message').innerHTML = 
+  'Are you sure you want to reset the score? <button class="js-reset-confirm-yes reset-confirm-button">Yes</button><button class="js-reset-confirm-no reset-confirm-no">No</button>';
+}
 
+document.querySelector('.js-reset-confirm-yes').addEventListener('click', () => {
+  resetScore ();
+  hideResetConfirmation ();
+});
 
+document.querySelector('.js-reset-confirm-no').addEventListener('click', () => {
+  hideResetConfirmation ();
+});
+
+function hideResetConfirmation () {
+  document.querySelector('.js-confirmation-message').innerHTML = '';
+}
+
+// pa edit. ayaw gumana ang yes  & no
