@@ -28,7 +28,7 @@ body {
 .result {
   font-size: 25px;
   font-weight: bold;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .score {
@@ -36,7 +36,7 @@ body {
 
 }
 
-.reset-score-button, .check-score-button, .auto-play-button {
+.reset-score-button, .check-score-button, .auto-play-button, .confirm-yes, .confirm-no {
   background-color: white;
   border: none;
   font-size: 15px;
@@ -62,9 +62,18 @@ body {
 
 .footers-jonelle {
   text-align: center;
-  margin-top: 90px;
+  margin-top: 30px;
 }
 
 a {
   color: white;
+}
+
+.confirmation-message {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.confirm-message {
+  margin-bottom: 10px;
 }
