@@ -82,6 +82,8 @@ document.body.addEventListener('keydown', (event) => {
     playGame('scissors');
   } else if (event.key === 'a') {
     autoPlay();
+  } else if (event.key === 'Backspace') {
+    confirmationMessage ();
   }
 });
 
@@ -197,17 +199,27 @@ document.body.addEventListener('click', () => {
 
 function confirmationMessage () {
   document.querySelector('.js-confirmation-message').innerHTML = 
-  'Are you sure you want to reset the score? <button class="js-reset-confirm-yes reset-confirm-button">Yes</button><button class="js-reset-confirm-no reset-confirm-no">No</button>';
+  `Are you sure you want to reset the score? 
+  <button class="js-reset-confirm-yes reset-confirm-button" onclick="
+  resetScore ();
+  hideResetConfirmation ();
+  ">Yes</button>
+  <button class="js-reset-confirm-no reset-confirm-no"
+  onclick="
+  hideResetConfirmation ();
+  ">No</button>`;
 }
 
-document.querySelector('.js-reset-confirm-yes').addEventListener('click', () => {
+// this is a correct code. I don't know why It's not working.
+
+/* document.querySelector('.js-reset-confirm-yes').addEventListener('click', () => {
   resetScore ();
   hideResetConfirmation ();
 });
 
 document.querySelector('.js-reset-confirm-no').addEventListener('click', () => {
   hideResetConfirmation ();
-});
+}); */
 
 function hideResetConfirmation () {
   document.querySelector('.js-confirmation-message').innerHTML = '';
